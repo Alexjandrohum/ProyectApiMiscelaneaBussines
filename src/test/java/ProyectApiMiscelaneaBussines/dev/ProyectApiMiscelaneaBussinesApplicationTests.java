@@ -1,4 +1,4 @@
-package ProyectApiMiscelaneaBussines.ProyectApiMiscelaneaBussines;
+package ProyectApiMiscelaneaBussines.dev;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
