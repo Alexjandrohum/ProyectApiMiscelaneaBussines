@@ -5,7 +5,7 @@
  */
 package ProyectApiMiscelaneaBussines.dev.contract;
 
-import ProyectApiMiscelaneaBussines.dev.entities.Product;
+import ProyectApiMiscelaneaBussines.dev.dto.ProductDto;
 import java.util.List;
 
 /**
@@ -14,6 +14,6 @@ import java.util.List;
  */
 public interface ProductContract {
     
-    List<Product> getAllProducts();
+    List<ProductDto> getAllProducts();
     
 }

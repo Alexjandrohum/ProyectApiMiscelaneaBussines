@@ -25,7 +25,7 @@ public class Product implements Serializable{
     private String name;
 
     @Column(name = "price_product")
-    private float priceProduct;
+    private double priceProduct;
 
     @Column(name = "created_date")
     private Date createdDate;
@@ -51,11 +51,11 @@ public class Product implements Serializable{
         this.name = name;
     }
 
-    public float getPriceProduct() {
+    public double getPriceProduct() {
         return priceProduct;
     }
 
-    public void setPriceProduct(float priceProduct) {
+    public void setPriceProduct(double priceProduct) {
         this.priceProduct = priceProduct;
     }
 

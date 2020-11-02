@@ -6,14 +6,15 @@
 package ProyectApiMiscelaneaBussines.dev.web;
 
 import ProyectApiMiscelaneaBussines.dev.contract.ProductContract;
-import ProyectApiMiscelaneaBussines.dev.entities.Product;
-import java.util.List;
+import ProyectApiMiscelaneaBussines.dev.dto.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  *
@@ -27,7 +28,7 @@ public class ProductController {
     private ProductContract productContract;
 
     @GetMapping("/all")
-    public ResponseEntity<List<Product>> all() {
+    public ResponseEntity<List<ProductDto>> all() {
         return new ResponseEntity(productContract.getAllProducts(), HttpStatus.OK);
     }
 

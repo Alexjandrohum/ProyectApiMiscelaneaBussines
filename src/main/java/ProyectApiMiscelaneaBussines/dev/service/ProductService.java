@@ -6,7 +6,9 @@
 package ProyectApiMiscelaneaBussines.dev.service;
 
 import ProyectApiMiscelaneaBussines.dev.contract.ProductContract;
+import ProyectApiMiscelaneaBussines.dev.dto.ProductDto;
 import ProyectApiMiscelaneaBussines.dev.entities.Product;
+import ProyectApiMiscelaneaBussines.dev.mapper.ProductMapper;
 import ProyectApiMiscelaneaBussines.dev.persistence.crud.ProductCrudRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +24,13 @@ public class ProductService implements ProductContract{
     @Autowired
     private ProductCrudRepository productCrud;
 
+    @Autowired
+    private ProductMapper productMapper;
+
     @Override
-    public List<Product> getAllProducts() {
-        return (List<Product>) productCrud.findAll();
+    public List<ProductDto> getAllProducts() {
+        List<Product> products = productCrud.getProductsActive();
+        return productMapper.toProductDtos(products);
     }
     
 }
