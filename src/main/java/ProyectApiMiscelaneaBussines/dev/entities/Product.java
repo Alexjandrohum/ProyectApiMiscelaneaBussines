@@ -10,12 +10,11 @@ import java.util.Date;
 import javax.persistence.*;
 
 /**
- *
  * @author alexjandrohum
  */
 @Entity
 @Table(name = "product_table")
-public class Product implements Serializable{
+public class Product implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -83,4 +82,15 @@ public class Product implements Serializable{
         this.status = status;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "idProduct=" + idProduct +
+                ", name='" + name + '\'' +
+                ", priceProduct=" + priceProduct +
+                ", createdDate=" + createdDate +
+                ", modifiedDate=" + modifiedDate +
+                ", status='" + status + '\'' +
+                '}';
+    }
 }
