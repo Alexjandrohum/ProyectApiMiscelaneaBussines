@@ -1,4 +1,4 @@
-package ProyectApiMiscelaneaBussines.dev.dto;
+package Api.dev.dto;
 
 import java.util.Date;
 

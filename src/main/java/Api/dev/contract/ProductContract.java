@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProyectApiMiscelaneaBussines.dev.contract;
+package Api.dev.contract;
 
-import ProyectApiMiscelaneaBussines.dev.dto.ProductDto;
-import ProyectApiMiscelaneaBussines.dev.entities.Product;
+import Api.dev.dto.ProductDto;
+import Api.dev.entities.Product;
 
 import java.util.List;
 

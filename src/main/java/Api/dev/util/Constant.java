@@ -1,4 +1,4 @@
-package ProyectApiMiscelaneaBussines.dev.util;
+package Api.dev.util;
 
 public class Constant {
 

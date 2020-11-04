@@ -1,7 +1,7 @@
-package ProyectApiMiscelaneaBussines.dev.mapper;
+package Api.dev.mapper;
 
-import ProyectApiMiscelaneaBussines.dev.dto.ProductDto;
-import ProyectApiMiscelaneaBussines.dev.entities.Product;
+import Api.dev.dto.ProductDto;
+import Api.dev.entities.Product;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

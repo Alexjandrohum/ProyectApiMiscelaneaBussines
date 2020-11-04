@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProyectApiMiscelaneaBussines.dev.persistence.crud;
+package Api.dev.persistence.crud;
 
-import ProyectApiMiscelaneaBussines.dev.entities.Product;
+import Api.dev.entities.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

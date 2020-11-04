@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProyectApiMiscelaneaBussines.dev.web;
+package Api.dev.web;
 
-import ProyectApiMiscelaneaBussines.dev.contract.ProductContract;
-import ProyectApiMiscelaneaBussines.dev.dto.ProductDto;
-import ProyectApiMiscelaneaBussines.dev.util.Constant;
+import Api.dev.contract.ProductContract;
+import Api.dev.dto.ProductDto;
+import Api.dev.util.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

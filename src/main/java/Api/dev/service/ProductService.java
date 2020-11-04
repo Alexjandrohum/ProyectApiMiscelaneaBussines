@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProyectApiMiscelaneaBussines.dev.service;
+package Api.dev.service;
 
-import ProyectApiMiscelaneaBussines.dev.contract.ProductContract;
-import ProyectApiMiscelaneaBussines.dev.dto.ProductDto;
-import ProyectApiMiscelaneaBussines.dev.entities.Product;
-import ProyectApiMiscelaneaBussines.dev.mapper.ProductMapper;
-import ProyectApiMiscelaneaBussines.dev.persistence.crud.ProductCrudRepository;
+import Api.dev.contract.ProductContract;
+import Api.dev.dto.ProductDto;
+import Api.dev.entities.Product;
+import Api.dev.mapper.ProductMapper;
+import Api.dev.persistence.crud.ProductCrudRepository;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import ProyectApiMiscelaneaBussines.dev.util.Constant;
-import ProyectApiMiscelaneaBussines.dev.util.GetDates;
+import Api.dev.util.Constant;
+import Api.dev.util.GetDates;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
