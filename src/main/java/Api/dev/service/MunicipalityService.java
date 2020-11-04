@@ -13,26 +13,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MunicipalityService implements MunicipalityContract {
 
     @Autowired
     private MunicipalityCrudRepository municipalityCrud;
-    @Autowired
-    private MunicipalityMapper mapperMunicipality;
-    @Autowired
-    private LocationCrudRepository locationCrudRepository;
-    @Autowired
-    private LocationMapper mapperLocation;
 
     @Override
-    public List<MunicipalityDto> getAll() {
-        return mapperMunicipality.toMunicipalityDtos(municipalityCrud.findAll());
+    public List<Municipality> getAll() {
+        return municipalityCrud.findAll();
     }
 
     @Override
-    public List<LocationDto> getLocation() {
-        return mapperLocation.toLocationDtos(locationCrudRepository.findAll());
+    public Optional<Municipality> getMunicipalityById(int idMunicipality) {
+        return municipalityCrud.findById(idMunicipality);
     }
 }

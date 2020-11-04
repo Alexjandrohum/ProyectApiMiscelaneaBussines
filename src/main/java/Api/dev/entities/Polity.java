@@ -1,13 +1,13 @@
 package Api.dev.entities;
 
-import org.mapstruct.Mapping;
+import java.io.Serializable;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "polity_table")
-public class Polity {
+public class Polity implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

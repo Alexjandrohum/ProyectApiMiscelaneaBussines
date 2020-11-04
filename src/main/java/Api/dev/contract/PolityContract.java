@@ -1,11 +1,13 @@
 package Api.dev.contract;
 
-import Api.dev.dto.PolityDto;
 import Api.dev.entities.Polity;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PolityContract {
 
-    List<PolityDto> getAll();
+    List<Polity> getAll();
+    
+    Optional<Polity> getPolityById(int idPolity);
 }

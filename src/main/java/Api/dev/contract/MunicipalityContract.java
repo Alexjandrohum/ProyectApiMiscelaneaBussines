@@ -1,15 +1,14 @@
 package Api.dev.contract;
 
-import Api.dev.dto.LocationDto;
-import Api.dev.dto.MunicipalityDto;
-import Api.dev.entities.Location;
 import Api.dev.entities.Municipality;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface MunicipalityContract {
 
-    List<MunicipalityDto> getAll();
+    List<Municipality> getAll();
+    
+    Optional<Municipality> getMunicipalityById(int idMunicipality);
 
-    List<LocationDto> getLocation();
 }
