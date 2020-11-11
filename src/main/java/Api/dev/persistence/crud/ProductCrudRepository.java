@@ -29,7 +29,12 @@ public interface ProductCrudRepository extends JpaRepository<Product, Integer> {
 
     @Transactional
     @Modifying
-    @Query(value = "UPDATE product_table p SET p.name=:#{#pt.name}, p.price_product=:#{#pt.priceProduct}, p.modified_date=:#{#pt.modifiedDate} WHERE p.id_product=:#{#pt.idProduct}", nativeQuery = true)
+    @Query(value = "UPDATE "
+            + "product_table p SET "
+            + "p.name=:#{#pt.name}, "
+            + "p.price_product=:#{#pt.priceProduct}, "
+            + "p.modified_date=:#{#pt.modifiedDate} "
+            + "WHERE p.id_product=:#{#pt.idProduct}", nativeQuery = true)
     int updateProduct(@Param("pt") Product pt);
 
     @Query(value = "SELECT p.id_product, p.name, p.price_product, p.created_date FROM product_table p WHERE p.id_product=?1", nativeQuery = true)

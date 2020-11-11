@@ -1,11 +1,12 @@
 package Api.dev.entities;
 
+import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "municipality_table")
-public class Municipality {
+public class Municipality implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
