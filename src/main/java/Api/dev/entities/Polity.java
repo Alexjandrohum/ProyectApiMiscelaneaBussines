@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "polity_table")
-public class Polity implements Serializable{
+public class Polity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,6 +19,8 @@ public class Polity implements Serializable{
     private String status;
     @OneToMany(mappedBy = "polity")
     private List<Municipality> municipalities;
+    //@OneToOne(mappedBy = "address")
+    //private Address address;
 
     public Integer getIdPolity() {
         return idPolity;

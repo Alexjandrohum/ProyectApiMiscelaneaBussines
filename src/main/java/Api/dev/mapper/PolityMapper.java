@@ -17,6 +17,7 @@ public interface PolityMapper {
             @Mapping(source = "municipalities", target = "municipalitiesDto")
 
     })
+    //@Mapping(target = "address", ignore = true)
     List<PolityDto> toPolityDtos(List<Polity> polities);
 
 }

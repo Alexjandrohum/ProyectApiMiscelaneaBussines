@@ -1,5 +1,6 @@
 package Api.dev.dto;
 
+import Api.dev.entities.Address;
 import Api.dev.entities.Municipality;
 
 import java.util.List;
@@ -11,6 +12,7 @@ public class PolityDto {
     private String name;
     private String status;
     private List<Municipality> municipalitiesDto;
+    private Address address;
 
     public int getPolityId() {
         return polityId;

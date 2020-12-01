@@ -28,13 +28,16 @@ public class Address implements Serializable {
     private String numberOutside;
     @Column(name = "number_phone")
     private String numberPhone;
-    @Column(name = "created_Date")
+    @Column(name = "created_date")
     private Date createdDate;
     @Column(name = "modified_date")
     private Date modifiedDate;
     private String status;
     @Column(name = "id_polity")
     private int idPolity;
+    @OneToOne
+    @JoinColumn(name = "id_polity", insertable = false, updatable = false)
+    private Polity polity;
 
     public Integer getIdAddress() {
         return idAddress;
@@ -108,9 +111,17 @@ public class Address implements Serializable {
         this.idPolity = idPolity;
     }
 
+    public Polity getPolity() {
+        return polity;
+    }
+
+    public void setPolity(Polity polity) {
+        this.polity = polity;
+    }
+
     @Override
     public String toString() {
-        return "Address{" + "idAddress=" + idAddress + ", street=" + street + ", numberInside=" + numberInside + ", numberOutside=" + numberOutside + ", numberPhone=" + numberPhone + ", createdDate=" + createdDate + ", modifiedDate=" + modifiedDate + ", status=" + status + ", idPolity=" + idPolity + '}';
+        return "Address{" + "idAddress=" + idAddress + ", street=" + street + ", numberInside=" + numberInside + ", numberOutside=" + numberOutside + ", numberPhone=" + numberPhone + ", createdDate=" + createdDate + ", modifiedDate=" + modifiedDate + ", status=" + status + ", idPolity=" + idPolity + ", polity=" + polity + '}';
     }
 
 }

@@ -5,6 +5,7 @@
  */
 package Api.dev.dto;
 
+import Api.dev.entities.Polity;
 import java.util.Date;
 
 /**
@@ -22,6 +23,7 @@ public class AddressDto {
     private Date dateModified;
     private String status;
     private int polityId;
+    private Polity polity;
 
     public int getAddressId() {
         return addressId;
@@ -93,6 +95,14 @@ public class AddressDto {
 
     public void setPolityId(int polityId) {
         this.polityId = polityId;
+    }
+
+    public Polity getPolity() {
+        return polity;
+    }
+
+    public void setPolity(Polity polity) {
+        this.polity = polity;
     }
 
 }
