@@ -6,6 +6,7 @@ import Api.dev.contract.MunicipalityContract;
 import Api.dev.contract.PolityContract;
 import Api.dev.dto.AddressDto;
 import Api.dev.entities.Location;
+import Api.dev.entities.MessageError;
 import Api.dev.entities.Municipality;
 import Api.dev.entities.Polity;
 import Api.dev.util.Constant;
