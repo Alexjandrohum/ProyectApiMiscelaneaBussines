@@ -75,7 +75,7 @@ public class StoreController {
                 return new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
             }
         } catch (Exception e) {
-            log.error(e.getMessage());
+            //log.error(e.getMessage());
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
