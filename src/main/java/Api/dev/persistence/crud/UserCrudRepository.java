@@ -68,5 +68,20 @@ public interface UserCrudRepository extends JpaRepository<User, Integer> {
             + "u.mofified_date=:#{#usr.modifiedDate} "
             + "WHERE u.id_user=:#{#usr.idUser}", nativeQuery = true)
     int updateUserCrud(@Param("usr") User usr);
+    
+    @Query(value = "SELECT "
+            + "u.id_user, "
+            + "u.name, "
+            + "u.last_name, "
+            + "u.id_address, "
+            + "u.id_type_user, "
+            + "u.username, "
+            + "u.pass, "
+            + "u.photo, "
+            + "u.created_date, "
+            + "u.mofified_date, "
+            + "u.status "
+            + "FROM user_table u WHERE u.username = ?1", nativeQuery = true)
+    User getUserByUsername(String username);
 
 }
